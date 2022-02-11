@@ -1,0 +1,17 @@
+header {
+    background: #39327c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    box-shadow: 1px 1px 10px rgba(0,0,0, 0.8);
+    position: relative;
+}
+
+.time {
+    position: absolute;
+    left: 5%;
+    color: #fff;
+    font-size: 1.8rem;
+    
+}

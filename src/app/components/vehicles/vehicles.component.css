@@ -1,0 +1,59 @@
+.container {
+    border: 1px solid #000;
+    border-radius: 5px;
+    min-height: 500px;
+    width: 1000px;
+    background: #fff;
+}
+
+.header {
+    width: 100%;
+    background-color: hsl(246, 42%, 48%);
+    height: 40px;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+}
+
+table thead tr {
+    background: #dedfe0;
+    border-bottom: 1px solid #000;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #000;
+}
+
+table tbody tr:last-child {
+    border: none;
+}
+
+.marcar-saida {
+    background: #575e16;
+    border: none;
+    color: #fff;
+    width: 110px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.marcar-saida:hover {
+    filter: opacity(0.9);
+}

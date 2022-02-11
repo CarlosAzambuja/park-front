@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="header">
+    <h2>Novo veículo</h2>
+  </div>
+
+  <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+    <div class="form-container">
+      <div class="plate-container">
+        <label for="plate">Placa</label>
+        <input type="text" formControlName="plate"/>
+      </div>
+
+      <input type="hidden" formControlName="entry_date">
+
+      <button type="submit">Registrar</button>
+    </div>
+  </form>
+</div>

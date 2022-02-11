@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="header">
+        <h2>Veículos no pátio</h2>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>PLACA</th>
+                <th>CLIENTE</th>
+                <th>ENTRADA</th>
+                <th>REGISTRAR SAÍDA</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="vehicles">
+            <tr *ngFor="let vehicle of vehicles">
+                <td>{{vehicle.plate}}</td>
+                <td>{{vehicle.name}}</td>
+                <td>{{formatedDate(vehicle.entry_date)}}</td>
+                <td><button class="marcar-saida">Marcar saída</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
