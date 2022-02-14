@@ -9,8 +9,10 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.getTime(),
-    this.interval()
+    this.getTime()
+    setInterval(() => {
+      this.getTime()
+    }, 1000)
   }
 
   time = '';
@@ -33,9 +35,5 @@ export class HeaderComponent implements OnInit {
 
     const time = hour + ':' + min + ':' + sec;
     this.time = time
-  }
-
-  interval(){
-    setInterval(this.getTime, 1000)
   }
 }
