@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
   HttpClient,
-  HttpErrorResponse,
   HttpHeaders,
 } from '@angular/common/http';
 import { Vehicle } from 'src/app/models/vehicle';
@@ -23,21 +22,26 @@ export class VehiclesService {
   //Obter vehicles
   getVehicles(): Observable<Vehicle[]> {
     return this.httpClient
-      .get<Vehicle[]>(`${this.url}/movement/register`)
+      .get<Vehicle[]>(`${this.url}/movement/get`)
       .pipe(retry(2));
   }
 
   // Salvar vehicles
-  saveVehicle(vehicle: Vehicle): Observable<Vehicle> {
+  saveVehicle(vehicle: any): Observable<Vehicle> {
+    var object:any = {};
+    vehicle.forEach(function(value:any, key:any){
+        object[key] = value;
+    });
+    
     return this.httpClient
-      .post<Vehicle>(`${this.url}/movement/register/`, JSON.stringify(vehicle), this.httpOptions)
+      .post<Vehicle>(`${this.url}/movement/register`, JSON.stringify(object), this.httpOptions)
       .pipe(retry(2));
   }
 
   // atualizar vehicles
-  updateVehicle(vehicle: Vehicle): Observable<Vehicle> {
+  updateVehicle(date: string, vehicleId: number): Observable<Vehicle> {
     return this.httpClient
-      .put<Vehicle>(`${this.url}/movement/register/vehicle.id`, JSON.stringify(vehicle), this.httpOptions)
+      .put<Vehicle>(`${this.url}/movement/update/${vehicleId}`, JSON.stringify(date), this.httpOptions)
       .pipe(retry(1));
   }
 }

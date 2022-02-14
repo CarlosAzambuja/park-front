@@ -44,7 +44,7 @@ table tbody tr:last-child {
     border: none;
 }
 
-.marcar-saida {
+.mark-exit {
     background: #575e16;
     border: none;
     color: #fff;
@@ -54,6 +54,6 @@ table tbody tr:last-child {
     cursor: pointer;
 }
 
-.marcar-saida:hover {
+.mark-exit:hover {
     filter: opacity(0.9);
 }

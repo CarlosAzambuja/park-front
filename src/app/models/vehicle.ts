@@ -1,7 +1,9 @@
 export interface Vehicle {
-    id: number,
+    id?: number,
     plate: string,
-    kind: number,
-    name: string,
+    kind?: number,
+    name?: string,
     entry_date: string
 }
+
+

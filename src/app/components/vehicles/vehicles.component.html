@@ -16,7 +16,7 @@
                 <td>{{vehicle.plate}}</td>
                 <td>{{vehicle.name}}</td>
                 <td>{{formatedDate(vehicle.entry_date)}}</td>
-                <td><button class="marcar-saida">Marcar saída</button></td>
+                <td><button class="mark-exit" (click)="markExit($event, vehicle)">Marcar saída</button></td>
             </tr>
         </tbody>
     </table>
